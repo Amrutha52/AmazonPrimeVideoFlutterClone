@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/constants/image_constants.dart';
+import '../username_screen/UserNameScreen.dart';
 
 class Splashscreen extends StatefulWidget
 {
@@ -16,8 +17,9 @@ class _SplashscreenState extends State<Splashscreen>
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3))
-        .then((value) {
-     // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UserNameScreen()));
+        .then((value)
+    {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UserNameScreen()));
     });
     super.initState();
   }
@@ -27,7 +29,7 @@ class _SplashscreenState extends State<Splashscreen>
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Image.asset(imageConstants.LOGO_PNG),
+        child: Image.asset(imageConstants.LOGO_PNG,),
       ),
     );
   }
