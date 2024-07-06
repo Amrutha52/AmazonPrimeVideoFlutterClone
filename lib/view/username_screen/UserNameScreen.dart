@@ -60,7 +60,7 @@ class _UserNameScreenState extends State<UserNameScreen>
                         content: Text("Profile added successfully")));
                   },
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CircleAvatar(
                         backgroundColor: Colors.grey.shade600,
