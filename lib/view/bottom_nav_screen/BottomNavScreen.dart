@@ -18,7 +18,7 @@ class _BottomNavScreenState extends State<BottomNavScreen>
   int selectedIndex = 0;
   List<Widget> myScreens = [
     HomeScreen(),
-    SearchScreen(),
+    Container(color: Colors.yellow,),
     Container(color: Colors.green,),
     Container(color: Colors.blue,),
     Container(color: Colors.orange,)
@@ -35,8 +35,8 @@ class _BottomNavScreenState extends State<BottomNavScreen>
         type: BottomNavigationBarType.fixed,
         unselectedFontSize: 10,
         selectedFontSize: 10,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
+        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold,),
+        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal,),
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.white,),
