@@ -1,4 +1,5 @@
 import 'package:amazonprimevideoclone/dummyDB.dart';
+import 'package:amazonprimevideoclone/view/bottom_nav_screen/BottomNavScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class _UserNameScreenState extends State<UserNameScreen>
                   {
                     return InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => BottomNavScreen()));
                       },
                       child: Column(
                         children: [
