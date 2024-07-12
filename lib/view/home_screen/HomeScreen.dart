@@ -3,6 +3,7 @@ import 'package:amazonprimevideoclone/utils/constants/color_constants.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/AllTabs.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/MoviesTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/TVShowsTab.dart';
+import 'package:amazonprimevideoclone/view/home_screen/widgets/MovieScreenCardWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -177,20 +178,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.grey // Inactive Color
                   ),
                 ),
-
-                // Vertical Image Carousel Slider
-                // Container(
-                //   child: CarouselSlider(
-                //     items: imageSliders,
-                //     options: CarouselOptions(
-                //       aspectRatio: 2.0,
-                //       enlargeCenterPage: true,
-                //       scrollDirection: Axis.vertical,
-                //       autoPlay: true
-                //     ),
-                //   ),
-                // )
-
+                SizedBox(height: 20,),
+                MoviesCardBuilderWidget(customHeight: 100,
+                  customWidth: 200,
+                  posterImages: DummyDB.verticalSliderList,
+                  title: "Continue Watching",
+                ),
+                SizedBox(height: 20,),
+                MoviesCardBuilderWidget(customHeight: 100,
+                  customWidth: 200,
+                  posterImages: DummyDB.verticalSliderList,
+                  title: "Recommended Movies",
+                ),
+                SizedBox(height: 20,),
+                MoviesCardBuilderWidget(customHeight: 100,
+                  customWidth: 200,
+                  posterImages: DummyDB.verticalSliderList,
+                  title: "Watch in your Language",
+                ),
+                SizedBox(height: 20,),
+                MoviesCardBuilderWidget(customHeight: 100,
+                  customWidth: 200,
+                  posterImages: DummyDB.verticalSliderList,
+                  title: "Romance Movies",
+                ),
               ],
             ),
           ),
