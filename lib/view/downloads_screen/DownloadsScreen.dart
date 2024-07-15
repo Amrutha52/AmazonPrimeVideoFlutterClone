@@ -31,13 +31,43 @@ class _DownloadsScreenState extends State<DownloadsScreen>
             fontSize: 16,
               fontWeight: FontWeight.bold,
             ),),
-            Container(
-              decoration: BoxDecoration(
-                color: colorConstants.mainwhite
+            SizedBox(height: 40,),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(300, 50),
+                backgroundColor: colorConstants.mainwhite,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                elevation: 10,
               ),
-              child: Text("Find videos to download", style: TextStyle(color: colorConstants.mainBlack,
-              fontSize: 14
-              ),),
+                onPressed: (){
+
+                },
+                child: Text("Find videos to download", style: TextStyle(
+                  color: colorConstants.mainBlack,
+                  fontSize: 16,
+                ),)
+            ),
+            SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Auto Downloads: On ", style: TextStyle(color: colorConstants.mainwhite,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),),
+                SizedBox(width: 10,),
+                Text(".", style: TextStyle(color: colorConstants.mainGrey,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),),
+                SizedBox(width: 10,),
+                Text("Manage ", style: TextStyle(color: colorConstants.mainBlue,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),),
+              ],
             )
           ],
         ),
