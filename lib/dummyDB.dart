@@ -22,6 +22,16 @@ class DummyDB
     "https://i.pinimg.com/236x/2b/14/da/2b14da6668dcc8e6456ab0ce9bcf1a5d.jpg",
   ];
 
+  static const List<String> genresList = [
+    "Action and adventure", "Anime", "Comedy", "Documentary", "Drama", "Fantasy",
+    "Horror", "Kids", "Mystery and Thrillers", "Romance", "Science Fiction"
+  ];
+
+  static const List<String> featuredCollectionsList = [
+    "Hindi", "English", "Telugu", "Tamil", "Malayalam", "Kannada",
+    "Punjabi", "Marathi", "Gujarati", "Bengali"
+  ];
+
 }
 
 

@@ -31,21 +31,21 @@ class _DownloadsScreenState extends State<DownloadsScreen>
             fontSize: 16,
               fontWeight: FontWeight.bold,
             ),),
-            SizedBox(height: 40,),
+            SizedBox(height: 20,),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                minimumSize: Size(300, 50),
-                backgroundColor: colorConstants.mainwhite,
+                //minimumSize: Size(300, 50),
+                backgroundColor: colorConstants.lightBlackShade,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
-                elevation: 10,
+                //elevation: 10,
               ),
                 onPressed: (){
 
                 },
                 child: Text("Find videos to download", style: TextStyle(
-                  color: colorConstants.mainBlack,
+                  color: colorConstants.mainwhite,
                   fontSize: 16,
                 ),)
             ),
@@ -58,7 +58,7 @@ class _DownloadsScreenState extends State<DownloadsScreen>
                   fontWeight: FontWeight.bold,
                 ),),
                 SizedBox(width: 10,),
-                Text(".", style: TextStyle(color: colorConstants.mainGrey,
+                Text(".", style: TextStyle(color: colorConstants.mainwhite,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),),

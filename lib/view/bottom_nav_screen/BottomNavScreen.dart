@@ -1,3 +1,4 @@
+import 'package:amazonprimevideoclone/ContactsPage.dart';
 import 'package:amazonprimevideoclone/view/downloads_screen/DownloadsScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,9 @@ class _BottomNavScreenState extends State<BottomNavScreen>
     Container(color: Colors.yellow,),
     Container(color: Colors.green,),
     DownloadsScreen(),
+    //JioTVSearchPage()
     SearchScreen()
+
   ];
   @override
   Widget build(BuildContext context) {
