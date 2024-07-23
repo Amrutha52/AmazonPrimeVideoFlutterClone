@@ -1,5 +1,6 @@
 import 'package:amazonprimevideoclone/ContactsPage.dart';
 import 'package:amazonprimevideoclone/view/downloads_screen/DownloadsScreen.dart';
+import 'package:amazonprimevideoclone/view/store_screen/StoreScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class _BottomNavScreenState extends State<BottomNavScreen>
   int selectedIndex = 0;
   List<Widget> myScreens = [
     HomeScreen(),
-    Container(color: Colors.yellow,),
+    StoreScreen(),
     Container(color: Colors.green,),
     DownloadsScreen(),
     //JioTVSearchPage()
