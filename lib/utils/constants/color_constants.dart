@@ -8,4 +8,5 @@ class colorConstants
   static Color mainBlue = Color(0xff3399ff);
   static Color mainGrey = Color(0xff8c8c8c);
   static Color lightBlackShade = Color(0xff666666);
+  static Color blackShade1 = Color(0xff262626);
 }

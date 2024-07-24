@@ -32,6 +32,17 @@ class DummyDB
     "Punjabi", "Marathi", "Gujarati", "Bengali"
   ];
 
+  static List<Map<String, String>> bbcKidsList = [
+    {"time" : "8 min left", "title" : "Go Jetters"},
+    {"time" : "3:22 PM", "title" : "Super Kids"},
+    {"time" : "3:30 PM", "title" : "TeleKids"},
+    {"time" : "3:55 PM", "title" : "Meh Messy"},
+    {"time" : "4:22 PM", "title" : "Hey Duggee"},
+    {"time" : "5:20 PM", "title" : "Bluey"},
+    {"time" : "6:29 PM", "title" : "Grace"},
+  ];
+
+
 }
 
 

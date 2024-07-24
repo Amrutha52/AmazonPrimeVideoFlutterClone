@@ -1,5 +1,6 @@
 import 'package:amazonprimevideoclone/ContactsPage.dart';
 import 'package:amazonprimevideoclone/view/downloads_screen/DownloadsScreen.dart';
+import 'package:amazonprimevideoclone/view/live_tv_screen/LiveTVScreen.dart';
 import 'package:amazonprimevideoclone/view/store_screen/StoreScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _BottomNavScreenState extends State<BottomNavScreen>
   List<Widget> myScreens = [
     HomeScreen(),
     StoreScreen(),
-    Container(color: Colors.green,),
+    LiveTVScreen(),
     DownloadsScreen(),
     //JioTVSearchPage()
     SearchScreen()
