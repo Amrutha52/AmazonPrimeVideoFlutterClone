@@ -4,6 +4,7 @@ import 'package:amazonprimevideoclone/view/home_screen/tabs/AllTabs.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/MoviesTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/TVShowsTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/widgets/MovieScreenCardWidget.dart';
+import 'package:amazonprimevideoclone/view/store_screen/widgets/StoreMovieCardBuilderWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -170,10 +171,11 @@ class _StoreScreenState extends State<StoreScreen>
                 ),
               ),
               SizedBox(height: 20,),
-              MoviesCardBuilderWidget(customHeight: 100,
+              StoreMovieCardBuilderWidget(customHeight: 100,
                 customWidth: 200,
                 posterImages: DummyDB.verticalSliderList,
-                title: "Continue Watching",
+                title: "VROTT - Limited time deal at 199/-",
+                subTitle: 'Subscribe',
               ),
               SizedBox(height: 20,),
               MoviesCardBuilderWidget(customHeight: 100,
