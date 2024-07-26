@@ -6,6 +6,7 @@ import 'package:amazonprimevideoclone/view/home_screen/tabs/TVShowsTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/widgets/MovieScreenCardWidget.dart';
 import 'package:amazonprimevideoclone/view/store_screen/widgets/MovieCardWidget.dart';
 import 'package:amazonprimevideoclone/view/store_screen/widgets/StoreMovieCardBuilderWidget.dart';
+import 'package:amazonprimevideoclone/view/store_screen/widgets/TopMoviesCard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -197,7 +198,7 @@ class _StoreScreenState extends State<StoreScreen>
                     }),
                ),
 
-              SizedBox(height: 20,),
+              SizedBox(height: 10,),
               Text(
                 "In the spotlight",
                 style: TextStyle(
@@ -221,23 +222,105 @@ class _StoreScreenState extends State<StoreScreen>
                       );
                     }),
               ),
-              MoviesCardBuilderWidget(customHeight: 100,
-                customWidth: 200,
-                posterImages: DummyDB.verticalSliderList,
-                title: "In the spotlight",
+              SizedBox(height: 10,),
+              Text(
+                "Movies from the last Decade",
+                style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20,),
-              MoviesCardBuilderWidget(customHeight: 100,
-                customWidth: 200,
-                posterImages: DummyDB.verticalSliderList,
-                title: "Watch in your Language",
+              SizedBox(height: 10,),
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                    itemCount: DummyDB.storeSpotLightList1.length,
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return MovieCardWidget(
+                        customHeight: 100,
+                        customWidth: 250,
+                        posterImages: DummyDB.storeSpotLightList1[index],
+                        subTitle: DummyDB.storeSpotLightList1[index],
+                      );
+                    }),
               ),
-              SizedBox(height: 20,),
-              MoviesCardBuilderWidget(customHeight: 100,
-                customWidth: 200,
-                posterImages: DummyDB.verticalSliderList,
-                title: "Romance Movies",
+              SizedBox(height: 10,),
+              InkWell(
+                onTap: () {},
+                child: Text(
+                  "Top 10 in United States",
+                  style: TextStyle(
+                      color: colorConstants.mainwhite,
+                      fontSize: 21,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
+              SizedBox(height: 10,),
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                    itemCount: DummyDB.storeSpotLightList1.length,
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return TopMoviesCard(
+                        movie: DummyDB.storeSpotLightList1[index],
+                        index: index,
+                        subTitle: DummyDB.storeSpotLightList1[index],
+                      );
+                    }),
+              ),
+              SizedBox(height: 10,),
+              Text(
+                "Romance Movies",
+                style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10,),
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                    itemCount: DummyDB.storeSpotLightList1.length,
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return MovieCardWidget(
+                        customHeight: 100,
+                        customWidth: 250,
+                        posterImages: DummyDB.storeSpotLightList1[index],
+                        subTitle: DummyDB.storeSpotLightList1[index],
+                      );
+                    }),
+              ),
+              SizedBox(height: 10,),
+              Text(
+                "Fantasy Movies",
+                style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10,),
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                    itemCount: DummyDB.storeSpotLightList1.length,
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return MovieCardWidget(
+                        customHeight: 100,
+                        customWidth: 250,
+                        posterImages: DummyDB.storeSpotLightList1[index],
+                        subTitle: DummyDB.storeSpotLightList1[index],
+                      );
+                    }),
+              ),
+
             ],
           ),
         ),
