@@ -4,6 +4,7 @@ import 'package:amazonprimevideoclone/view/home_screen/tabs/AllTabs.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/MoviesTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/TVShowsTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/widgets/MovieScreenCardWidget.dart';
+import 'package:amazonprimevideoclone/view/store_screen/widgets/MovieCardWidget.dart';
 import 'package:amazonprimevideoclone/view/store_screen/widgets/StoreMovieCardBuilderWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -111,6 +112,7 @@ class _StoreScreenState extends State<StoreScreen>
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Container(
               //   height: 40,
@@ -171,17 +173,58 @@ class _StoreScreenState extends State<StoreScreen>
                 ),
               ),
               SizedBox(height: 20,),
-              StoreMovieCardBuilderWidget(customHeight: 100,
-                customWidth: 200,
-                posterImages: DummyDB.verticalSliderList,
-                title: "VROTT - Limited time deal at 199/-",
-                subTitle: 'Subscribe',
+              Text(
+                "VROTT - Most popular",
+                style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
               ),
+              SizedBox(height: 10,),
+              SizedBox(
+                height: 200,
+                child: ListView.builder(
+                    itemCount: DummyDB.storeList1.length,
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return MovieCardWidget(
+                        customHeight: 100,
+                        customWidth: 250,
+                        posterImages: DummyDB.storeList1[index],
+                        subTitle: DummyDB.storeList1[index],
+                      );
+                    }),
+               ),
+
               SizedBox(height: 20,),
+              Text(
+                "In the spotlight",
+                style: TextStyle(
+                    color: colorConstants.mainwhite,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 10,),
+              SizedBox(
+                height: 300,
+                child: ListView.builder(
+                    itemCount: DummyDB.storeSpotLightList1.length,
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return MovieCardWidget(
+                        customHeight: 200,
+                        customWidth: 100,
+                        posterImages: DummyDB.storeSpotLightList1[index],
+                        subTitle: DummyDB.storeSpotLightList1[index],
+                      );
+                    }),
+              ),
               MoviesCardBuilderWidget(customHeight: 100,
                 customWidth: 200,
                 posterImages: DummyDB.verticalSliderList,
-                title: "Recommended Movies",
+                title: "In the spotlight",
               ),
               SizedBox(height: 20,),
               MoviesCardBuilderWidget(customHeight: 100,
