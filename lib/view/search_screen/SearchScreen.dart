@@ -2,10 +2,10 @@ import 'package:amazonprimevideoclone/dummyDB.dart';
 import 'package:amazonprimevideoclone/view/search_screen/widgets/FeaturedCollectionTile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../utils/constants/color_constants.dart';
 
-class SearchScreen extends StatefulWidget {
+class SearchScreen extends StatefulWidget
+{
   const SearchScreen({super.key});
 
   @override
@@ -14,7 +14,7 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   var _displayAll = false;
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,46 +76,171 @@ class _SearchScreenState extends State<SearchScreen> {
                     fontWeight: FontWeight.bold,
                     fontSize: 18),),
               ),
-              // SizedBox(height: 20,),
-              // Container(
-              //     child: _gridContacts(),
-              //     // GridView.builder(
-              //     //   itemCount: 2,//myItems.length,
-              //     //   padding: EdgeInsets.all(20),
-              //     //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //     //     crossAxisCount: 2,
-              //     //     mainAxisSpacing: 15,
-              //     //     crossAxisSpacing: 15,
-              //     //     mainAxisExtent: 250,
-              //     //   ),
-              //     //   itemBuilder: (context, index) => Column(
-              //     //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     //     children: [
-              //     //       Container(
-              //     //         padding: EdgeInsets.all(15),
-              //     //         height: 60,
-              //     //         width: 300,
-              //     //         decoration: BoxDecoration(
-              //     //             borderRadius: BorderRadius.circular(10),
-              //     //             color: Colors.grey.withOpacity(.2),
-              //     //             // image: DecorationImage(
-              //     //             //     fit: BoxFit.cover,
-              //     //             //     image: NetworkImage(myItems[index]["url"]))
-              //     //         ),
-              //     //         alignment: Alignment.topRight,
-              //     //         child: Text(
-              //     //           "title",
-              //     //           style: TextStyle(
-              //     //               color: Colors.white,
-              //     //               fontWeight: FontWeight.bold,
-              //     //               fontSize: 18),
-              //     //         ),
-              //     //       ),
-              //     //
-              //     //     ],
-              //     //   ),
-              //     // )
-              // ),
+              SizedBox(height: 20,),
+             Row(
+               children: [
+                 Padding(
+                   padding: const EdgeInsets.only(left: 20.0),
+                   child: Container(
+                     padding: EdgeInsets.all(15),
+                     height: 80,
+                     width: 150,
+                     decoration: BoxDecoration(
+                       borderRadius: BorderRadius.circular(10),
+                       color: Colors.grey.withOpacity(.2),
+                       // image: DecorationImage(
+                       //     fit: BoxFit.cover,
+                       //     image: NetworkImage(myItems[index]["url"]))
+                     ),
+                     alignment: Alignment.topRight,
+                     child: Center(
+                       child: Text(
+                         "Action and Adventure",
+                         style: TextStyle(
+                             color: Colors.white,
+                             fontWeight: FontWeight.bold,
+                             fontSize: 18),
+                       ),
+                     ),
+                   ),
+                 ),
+                 Padding(
+                   padding: const EdgeInsets.only(left: 20.0),
+                   child: Container(
+                     padding: EdgeInsets.all(15),
+                     height: 80,
+                     width: 150,
+                     decoration: BoxDecoration(
+                       borderRadius: BorderRadius.circular(10),
+                       color: Colors.grey.withOpacity(.2),
+                       // image: DecorationImage(
+                       //     fit: BoxFit.cover,
+                       //     image: NetworkImage(myItems[index]["url"]))
+                     ),
+                     alignment: Alignment.topRight,
+                     child: Center(
+                       child: Text(
+                         "Anim",
+                         style: TextStyle(
+                             color: Colors.white,
+                             fontWeight: FontWeight.bold,
+                             fontSize: 18),
+                       ),
+                     ),
+                   ),
+                 ),
+               ],
+             ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      height: 80,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.withOpacity(.2),
+                        // image: DecorationImage(
+                        //     fit: BoxFit.cover,
+                        //     image: NetworkImage(myItems[index]["url"]))
+                      ),
+                      alignment: Alignment.topRight,
+                      child: Center(
+                        child: Text(
+                          "Comedy",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      height: 80,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.withOpacity(.2),
+                        // image: DecorationImage(
+                        //     fit: BoxFit.cover,
+                        //     image: NetworkImage(myItems[index]["url"]))
+                      ),
+                      alignment: Alignment.topRight,
+                      child: Center(
+                        child: Text(
+                          "Documentary",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      height: 80,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.withOpacity(.2),
+                        // image: DecorationImage(
+                        //     fit: BoxFit.cover,
+                        //     image: NetworkImage(myItems[index]["url"]))
+                      ),
+                      alignment: Alignment.topRight,
+                      child: Center(
+                        child: Text(
+                          "Drama",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      height: 80,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.withOpacity(.2),
+                        // image: DecorationImage(
+                        //     fit: BoxFit.cover,
+                        //     image: NetworkImage(myItems[index]["url"]))
+                      ),
+                      alignment: Alignment.topRight,
+                      child: Center(
+                        child: Text(
+                          "Fantasy",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.only(left: 15.0),
@@ -148,7 +273,7 @@ class _SearchScreenState extends State<SearchScreen> {
     );
   }
 
-  Widget _gridContacts() 
+  Widget _gridContacts()
   {
     final size = _displayAll ? DummyDB.genresList.length : DummyDB.genresList.length - 5;
     final genreListWidget = List.generate(
@@ -162,7 +287,7 @@ class _SearchScreenState extends State<SearchScreen> {
       children: genreListWidget,);
   }
 
- 
+
 
   Widget _genreItem(String item) {
     return Container(
@@ -205,3 +330,6 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
 }
+
+
+
