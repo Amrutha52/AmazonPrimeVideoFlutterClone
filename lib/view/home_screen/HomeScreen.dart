@@ -1,5 +1,6 @@
 import 'package:amazonprimevideoclone/dummyDB.dart';
 import 'package:amazonprimevideoclone/utils/constants/color_constants.dart';
+import 'package:amazonprimevideoclone/utils/constants/image_constants.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/AllTabs.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/MoviesTab.dart';
 import 'package:amazonprimevideoclone/view/home_screen/tabs/TVShowsTab.dart';
@@ -70,27 +71,28 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: colorConstants.mainBlack,
             centerTitle: false, // To align text in left
             leadingWidth: 0, // To align text in left
-            title: Column(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("prime video",
-                  style: TextStyle(color: colorConstants.mainwhite,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      height: 0.6
-                  ),
-                ),
-                Image.network(
-                    width: 60,
-                    "https://t3.ftcdn.net/jpg/06/41/15/32/360_F_641153298_zG4JMOP3RGnp2zTbpFU66vjxIKhdHQiA.jpg")
-              ],
-            ),
+            title: Image.asset(imageConstants.PRIME_LOGO,width: 80,),
+            // Column(
+            //   // crossAxisAlignment: CrossAxisAlignment.start,
+            //   children: [
+            //     Text("prime video",
+            //       style: TextStyle(color: colorConstants.mainwhite,
+            //           fontSize: 16,
+            //           fontWeight: FontWeight.bold,
+            //           height: 0.6
+            //       ),
+            //     ),
+            //     Image.network(
+            //         width: 60,
+            //         "https://t3.ftcdn.net/jpg/06/41/15/32/360_F_641153298_zG4JMOP3RGnp2zTbpFU66vjxIKhdHQiA.jpg")
+            //   ],
+            // ),
             actions: <Widget>[
               Icon(Icons.tab, color: colorConstants.mainwhite,),
               SizedBox(width: 20,),
               CircleAvatar(
                 radius: 15,
-                child: Image.asset("assets/images/user.png"),
+                child: Image.asset(imageConstants.USER_PNG),
               ),
               SizedBox(width: 20,),
             ],

@@ -1,3 +1,4 @@
+import 'package:amazonprimevideoclone/login_screen/LoginPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,8 @@ class _SplashscreenState extends State<Splashscreen>
     Future.delayed(Duration(seconds: 3))
         .then((value)
     {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UserNameScreen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => UserNameScreen())); // UserNameScreen()
+
     });
     super.initState();
   }
